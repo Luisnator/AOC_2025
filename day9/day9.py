@@ -26,6 +26,14 @@ listvolumes.reverse()
 
 maxvol = 0
 first = True
+
+#inputlist.append((94525,48322))
+#inputlist.append((94525,50422))
+
+inputlist.append((20000,49322))
+inputlist.append((50000,49422))
+inputlist.append((70000,49422))
+inputlist.append((40000,49422))
 for vol in listvolumes:
 
    point1 = vol[1][0]
@@ -54,7 +62,7 @@ for vol in listvolumes:
       print(vol[1][1])
       print(f"sx: {small_x}, bx: {big_x}, sy: {small_y}, by: {big_y}")
    for input in inputlist:
-      if ((input[0] >= small_x) and (input[0] <= big_x)) and ((input[1] >= small_y) and (input[1] <= big_y)):
+      if ((input[0] > small_x) and (input[0] < big_x)) and ((input[1] > small_y) and (input[1] < big_y)):
          if (input != point1) and (input != point2):
             feasable = False
    if feasable:
